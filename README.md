@@ -3,7 +3,7 @@ this is the Todlr development test. You will be required to carry out the task b
 
 #Task 
 You will be given a link to an endpoint that uses encrypted data and another link that has designed app pages in Figma. 
-Your task is to recreate the app screens using Flutter and properly decrypt the data from the endpoint to be used by the app screen so data is easily & securly accessible by the app screens.
+Your task is to recreate the app screens using Flutter and properly decrypt the data from the endpoint to be used by the app screen so data is easily & securly accessible by the app screens. Please clone this repo and create a branch with your name.
 
 
 
