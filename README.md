@@ -7,7 +7,6 @@ Your task is to recreate the app screens using Flutter and properly decrypt the 
 
 
 
-
 #Resource links 
 Figma Screens: https://www.figma.com/file/jyiAkS5vcbODZKvziGyvop/Untitled?node-id=2%3A32309
 Backend endpoint:
