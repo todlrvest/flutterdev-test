@@ -7,13 +7,24 @@ Your task is to recreate the app screens using Flutter and properly decrypt the 
 
 
 
-#Resource links 
-Figma Screens: https://www.figma.com/file/jyiAkS5vcbODZKvziGyvop/Untitled?node-id=2%3A32309
-Backend endpoint:
+#Resources
 
+#Front End
+Figma Screens: https://www.figma.com/file/jyiAkS5vcbODZKvziGyvop/Untitled?node-id=2%3A32309
+
+#Backend
+API DOCUMNETATION 
+https://documenter.getpostman.com/view/5547677/UVR4Loqq
+
+ENCRYPTION TYPE: 
+AES
+
+ENCRYPTION KEY:
+“a very very very very secret key”
 
 
 
 #Expected outcome
 Proper Translation from Figma to Flutter
 Propper encryption and decryption of endpoint
+Decrypt data from get endpoint using the above secret key
