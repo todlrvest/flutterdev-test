@@ -24,7 +24,7 @@ ENCRYPTION KEY:
 
 
 
-#Expected outcome
-Proper Translation from Figma to Flutter
-Propper encryption and decryption of endpoint
-Decrypt data from get endpoint using the above secret key
+#Expected outcomes
+1. Proper Translation from Figma to Flutter
+2. Propper encryption and decryption of endpoint
+3. Decrypt data from get endpoint using the above secret key
