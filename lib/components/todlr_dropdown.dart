@@ -572,7 +572,7 @@ class _COXDropdownButtonState<T> extends State<COXDropdownButton<T>>
       Theme.of(context)
           .textTheme
           .headline5
-          .copyWith(fontWeight: FontWeight.normal, color: textV1);
+          .copyWith(fontWeight: FontWeight.normal, color: textV1Colour);
 
   void _handleTap() {
     return displayBottomSheetDropUp();

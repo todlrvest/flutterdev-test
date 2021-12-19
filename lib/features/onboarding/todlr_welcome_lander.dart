@@ -15,7 +15,9 @@ class TodlrWelcomeLanderScreen extends StatelessWidget {
       return Text(
         title,
         style: Theme.of(context).textTheme.headline2!.copyWith(
-            color: color ?? textV2, fontWeight: FontWeight.w700, height: 1.6),
+            color: color ?? textV2Colour,
+            fontWeight: FontWeight.w700,
+            height: 1.6),
         textAlign: TextAlign.center,
       );
     }
@@ -39,7 +41,7 @@ class TodlrWelcomeLanderScreen extends StatelessWidget {
                     landerDescription,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.headline1!.copyWith(
-                          color: textV1,
+                          color: textV1Colour,
                           fontWeight: FontWeight.normal,
                           height: 1.6,
                         ),

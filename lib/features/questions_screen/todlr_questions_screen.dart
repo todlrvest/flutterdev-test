@@ -47,7 +47,7 @@ class _TodlrQuestionsScreenState extends State<TodlrQuestionsScreen> {
                   Text(
                     homeController.titleMessage,
                     style: Theme.of(context).textTheme.headline2!.copyWith(
-                        color: textV1,
+                        color: textV1Colour,
                         fontWeight: FontWeight.w700,
                         height: 1.6),
                   ),
@@ -56,7 +56,7 @@ class _TodlrQuestionsScreenState extends State<TodlrQuestionsScreen> {
                     child: Text(
                       homeController.descriptionMessage,
                       style: Theme.of(context).textTheme.headline1!.copyWith(
-                          color: textV3, fontWeight: FontWeight.normal),
+                          color: textV3Colour, fontWeight: FontWeight.normal),
                     ),
                   ),
                   ...enumerate(
@@ -72,7 +72,7 @@ class _TodlrQuestionsScreenState extends State<TodlrQuestionsScreen> {
                                       .textTheme
                                       .bodyText1!
                                       .copyWith(
-                                          color: textV3,
+                                          color: textV3Colour,
                                           fontWeight: FontWeight.bold),
                                 ),
                                 isExpanded: true,
@@ -90,7 +90,7 @@ class _TodlrQuestionsScreenState extends State<TodlrQuestionsScreen> {
                                                   .textTheme
                                                   .headline5!
                                                   .copyWith(
-                                                      color: textV1,
+                                                      color: textV1Colour,
                                                       fontWeight:
                                                           FontWeight.normal))),
                                     )

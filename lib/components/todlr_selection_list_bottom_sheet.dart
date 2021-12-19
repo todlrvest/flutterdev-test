@@ -7,7 +7,6 @@ import 'package:tolr_app/components/todlr_error_switcher.dart';
 import 'package:tolr_app/components/todlr_no_data.dart';
 import 'package:tolr_app/utils/todlr_colors.dart';
 
-
 typedef SegregationFunction<T> = bool Function(T value);
 
 bool isNotEmpty(String s) => s != null && s.isNotEmpty && s != 'null';
@@ -110,7 +109,10 @@ class _SelectionListBottomSheetState<T>
               title,
               style: _getSegregationTitleStyle(title) ??
                   widget.defaultSegregationTitleStyle ??
-                  Theme.of(context).textTheme.subtitle1.copyWith(color: textV1),
+                  Theme.of(context)
+                      .textTheme
+                      .subtitle1
+                      .copyWith(color: textV1Colour),
             ),
           ));
         }
