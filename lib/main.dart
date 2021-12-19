@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tolr_app/features/onboarding/todlr_welcome_lander.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
           // This is the theme of your application.
           primarySwatch: Colors.blue,
           textTheme: getTextTheme),
-      home: Container(),
+      home: const TodlrWelcomeLanderScreen(),
     );
   }
 
