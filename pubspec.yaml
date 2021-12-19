@@ -63,6 +63,17 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/
+
+  fonts:
+
+    - family: TT Travels
+      fonts:
+        - asset: assets/fonts/TT Travels-Black.otf
+          weight: 700
+        - asset: assets/fonts/TT Travels-Regular.otf
+          weight: 400
 
   # To add assets to your application, add an assets section, like this:
   # assets:
