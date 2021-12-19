@@ -67,7 +67,7 @@ class _TodlrQuestionsScreenState extends State<TodlrQuestionsScreen> {
                                 itemsListTitle: selectOption,
                                 iconSize: 22,
                                 hint: Text(
-                                  hintText(item).toString(),
+                                  getQuestion(item).toString(),
                                   style: Theme.of(context)
                                       .textTheme
                                       .bodyText1!
@@ -78,10 +78,10 @@ class _TodlrQuestionsScreenState extends State<TodlrQuestionsScreen> {
                                 isExpanded: true,
                                 isDense: true,
                                 underline: Container(),
-                                value: homeController
-                                        .getValues(hintText(item).toString()) ??
-                                    answerText(item)![0],
-                                items: answerText(item)!
+                                value: homeController.getValues(
+                                        getQuestion(item).toString()) ??
+                                    getAnswer(item)![0],
+                                items: getAnswer(item)!
                                     .map(
                                       (a) => DropdownMenuItem(
                                           value: a,
@@ -96,7 +96,7 @@ class _TodlrQuestionsScreenState extends State<TodlrQuestionsScreen> {
                                     )
                                     .toList(),
                                 onChanged: (v) => homeController.setQuest(
-                                      key: hintText(item).toString(),
+                                      key: getQuestion(item).toString(),
                                       answer: v,
                                     )),
                           )).toList(),
@@ -124,24 +124,24 @@ class _TodlrQuestionsScreenState extends State<TodlrQuestionsScreen> {
   }
 }
 
-String? hintText(dynamic y) {
-  if (y is YourCurrentFinancialSituation) {
-    return y.question;
-  } else if (y is YourInvestmentGoalsAndObjectives) {
-    return y.question;
-  } else if (y is YourRiskProfile) {
-    return y.question;
+String? getQuestion(dynamic item) {
+  if (item is YourCurrentFinancialSituation) {
+    return item.question;
+  } else if (item is YourInvestmentGoalsAndObjectives) {
+    return item.question;
+  } else if (item is YourRiskProfile) {
+    return item.question;
   }
   return null;
 }
 
-List<Answers>? answerText(dynamic y) {
-  if (y is YourCurrentFinancialSituation) {
-    return y.answers;
-  } else if (y is YourInvestmentGoalsAndObjectives) {
-    return y.answers;
-  } else if (y is YourRiskProfile) {
-    return y.answers;
+List<Answers>? getAnswer(dynamic item) {
+  if (item is YourCurrentFinancialSituation) {
+    return item.answers;
+  } else if (item is YourInvestmentGoalsAndObjectives) {
+    return item.answers;
+  } else if (item is YourRiskProfile) {
+    return item.answers;
   }
   return null;
 }
