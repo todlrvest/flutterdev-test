@@ -15,16 +15,21 @@ class TodlrButton extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 49,
-      decoration: BoxDecoration(
-          color: backgroundColor,
-          border: Border.all(color: Colors.transparent, width: 0.9),
-          borderRadius: BorderRadius.circular(25)),
-      child: Center(
-          child: Text(title,
-              style: Theme.of(context).textTheme.headline6!.copyWith(
-                  color: textColor, fontWeight: FontWeight.w700, height: 2.0))),
+    return InkWell(
+      onTap: callback,
+      child: Container(
+        height: 49,
+        decoration: BoxDecoration(
+            color: backgroundColor,
+            border: Border.all(color: Colors.transparent, width: 0.9),
+            borderRadius: BorderRadius.circular(25)),
+        child: Center(
+            child: Text(title,
+                style: Theme.of(context).textTheme.headline6!.copyWith(
+                    color: textColor,
+                    fontWeight: FontWeight.w700,
+                    height: 2.0))),
+      ),
     );
   }
 }
