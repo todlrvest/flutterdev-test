@@ -6,6 +6,7 @@ import 'package:tolr_app/components/todlr_dropdown.dart';
 import 'package:tolr_app/components/todlr_scaffold.dart';
 import 'package:tolr_app/data/controller/questions_controller.dart';
 import 'package:tolr_app/data/models/questionaire_response_model.dart';
+import 'package:tolr_app/features/questions_screen/todlr_investment_final_profile.dart';
 import 'package:tolr_app/utils/todlr_app_strings.dart';
 import 'package:tolr_app/utils/todlr_colors.dart';
 
@@ -108,7 +109,12 @@ class _TodlrQuestionsScreenState extends State<TodlrQuestionsScreen> {
                 if (pageCount < 2) {
                   pageCount++;
                   homeController.updateQuestionPage(pageCount);
-                } else {}
+                } else {
+                  homeController.questionStage = QuestionStage.finance;
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          const TodlrInvestmentFinalProfile()));
+                }
               },
             ),
           ],
