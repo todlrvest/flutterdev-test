@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tolr_app/components/todlr_button.dart';
 import 'package:tolr_app/components/todlr_scaffold.dart';
+import 'package:tolr_app/features/questions_screen/todlr_questions_screen.dart';
 import 'package:tolr_app/utils/todlr_app_strings.dart';
 import 'package:tolr_app/utils/todlr_colors.dart';
 import 'package:tolr_app/utils/todlr_images.dart';
@@ -49,7 +50,8 @@ class TodlrWelcomeLanderScreen extends StatelessWidget {
           ),
           TodlrButton(
             title: start,
-            callback: () => {},
+            callback: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const TodlrQuestionsScreen())),
           ),
         ],
       ),
