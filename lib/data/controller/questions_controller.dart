@@ -84,13 +84,21 @@ class QuestionsController with ChangeNotifier {
       pageState = PageState.loading;
       notifyListeners();
       var data = await QuestionsRepository().fetchQuestions();
-      pageState = PageState.loaded;
-      notifyListeners();
+
       if (data.success!) {
         var decryptedQuestions =
             await AESCipher().decrypt(data.data.toString());
         questionData = QuestionsList.fromJson(json.decode(decryptedQuestions));
-      } else {}
-    } catch (_) {}
+
+        pageState = PageState.loaded;
+        notifyListeners();
+      } else {
+        pageState = PageState.error;
+        notifyListeners();
+      }
+    } catch (_) {
+      pageState = PageState.error;
+      notifyListeners();
+    }
   }
 }

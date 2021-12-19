@@ -55,7 +55,7 @@ class _ErrorWidget extends StatelessWidget {
           Text(
             "Something went wrong",
             style: Theme.of(context).textTheme.bodyText2.copyWith(
-                  color: subColor,
+                  color: textV2Colour,
                   fontSize: 18,
                 ),
           ),
@@ -63,10 +63,10 @@ class _ErrorWidget extends StatelessWidget {
             height: 10,
           ),
           Text(
-            "connection error",
+            "Error",
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyText2.copyWith(
-                  color: subColor,
+                  color: textV2Colour,
                   fontSize: 12,
                 ),
           ),

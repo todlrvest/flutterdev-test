@@ -38,7 +38,11 @@ class _TodlrQuestionsScreenState extends State<TodlrQuestionsScreen> {
       child: TodlrNPScaffold(
         padding: const EdgeInsets.only(bottom: 30, left: 20, right: 20),
         appBar: TodlrAppBar(),
-        state: AppState(pageState: homeController.pageState),
+        state: AppState(
+            pageState: homeController.pageState,
+            onRetry: () {
+              homeController.fetchQuestions();
+            }),
         builder: (context) => Column(
           children: [
             Expanded(
